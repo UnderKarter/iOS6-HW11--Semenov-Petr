@@ -4,7 +4,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,12 +26,53 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhZ-zX-k1H">
+                                <rect key="frame" x="156" y="114" width="141" height="23"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Семёнов Пётр">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <font key="NSFont" size="20" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Установить статус" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cd-e4-3U1">
+                                <rect key="frame" x="156" y="145" width="124.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="np7-VP-lDl">
+                                <rect key="frame" x="156" y="172" width="54.5" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-8c-rph">
+                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="G23-TQ-0wk">
+                                        <rect key="frame" x="37.5" y="0.0" width="17" height="20"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="h0F-hc-eo0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="8CL-OQ-kts"/>
+                            <constraint firstItem="np7-VP-lDl" firstAttribute="top" secondItem="6cd-e4-3U1" secondAttribute="bottom" constant="10" id="CkY-NK-d3q"/>
+                            <constraint firstItem="rhZ-zX-k1H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Ehq-eT-r0b"/>
+                            <constraint firstItem="6cd-e4-3U1" firstAttribute="leading" secondItem="h0F-hc-eo0" secondAttribute="trailing" constant="18" id="Ffm-oe-vTk"/>
+                            <constraint firstItem="6cd-e4-3U1" firstAttribute="top" secondItem="rhZ-zX-k1H" secondAttribute="bottom" constant="10" id="KwT-Be-qBw"/>
                             <constraint firstItem="h0F-hc-eo0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="L9e-rg-cwL"/>
+                            <constraint firstItem="6cd-e4-3U1" firstAttribute="top" secondItem="rhZ-zX-k1H" secondAttribute="bottom" constant="8" id="RPL-H0-U2e"/>
+                            <constraint firstItem="np7-VP-lDl" firstAttribute="leading" secondItem="h0F-hc-eo0" secondAttribute="trailing" constant="18" id="bmM-Ll-jd8"/>
+                            <constraint firstItem="rhZ-zX-k1H" firstAttribute="leading" secondItem="h0F-hc-eo0" secondAttribute="trailing" constant="18" id="dFd-Ar-GHG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -42,6 +85,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iphone" catalog="system" width="108" height="128"/>
         <image name="picture" width="2000" height="1333"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
