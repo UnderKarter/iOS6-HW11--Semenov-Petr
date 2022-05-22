@@ -60,6 +60,24 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNn-MI-FFw">
+                                <rect key="frame" x="18" y="232" width="378" height="40"/>
+                                <color key="backgroundColor" red="0.17260035870000001" green="0.17630562189999999" blue="0.1843148768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="jeA-ei-3Gs"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Редактировать">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -71,11 +89,15 @@
                             <constraint firstItem="6cd-e4-3U1" firstAttribute="top" secondItem="rhZ-zX-k1H" secondAttribute="bottom" constant="10" id="KwT-Be-qBw"/>
                             <constraint firstItem="h0F-hc-eo0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="L9e-rg-cwL"/>
                             <constraint firstItem="6cd-e4-3U1" firstAttribute="top" secondItem="rhZ-zX-k1H" secondAttribute="bottom" constant="8" id="RPL-H0-U2e"/>
+                            <constraint firstItem="uNn-MI-FFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="ZAl-5K-q13"/>
                             <constraint firstItem="np7-VP-lDl" firstAttribute="leading" secondItem="h0F-hc-eo0" secondAttribute="trailing" constant="18" id="bmM-Ll-jd8"/>
                             <constraint firstItem="rhZ-zX-k1H" firstAttribute="leading" secondItem="h0F-hc-eo0" secondAttribute="trailing" constant="18" id="dFd-Ar-GHG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uNn-MI-FFw" secondAttribute="trailing" constant="18" id="y9k-dq-cxP"/>
+                            <constraint firstItem="uNn-MI-FFw" firstAttribute="top" secondItem="np7-VP-lDl" secondAttribute="bottom" constant="40" id="zyd-XR-AsJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="editButton" destination="uNn-MI-FFw" id="dBP-7U-YgF"/>
                         <outlet property="userAvatar" destination="h0F-hc-eo0" id="A1M-tb-3az"/>
                     </connections>
                 </viewController>
